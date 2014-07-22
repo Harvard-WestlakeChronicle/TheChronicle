@@ -28,8 +28,11 @@ Contact me at dwoldenberg1@gmail.com for any questions or anything at all.
 -->
 
 
-<head profile="http://gmpg.org/xfn/11">
-
+<head >
+	
+	<!-- html5 pforile -->
+	<link rel="profile" href="http://gmpg.org/xfn/11" />
+	
 	<meta charset="<?php bloginfo('charset'); ?>">
 	
 	<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->

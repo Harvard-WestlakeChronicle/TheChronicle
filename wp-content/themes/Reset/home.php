@@ -13,7 +13,6 @@
 <?php get_header(); ?>
 <?php include ("inc/big-nav.php"); ?>
 <?php $curmonth = curmonth(); $curyear = curyear(); ?>
-</div>
 <div id="ChronTop" class=" inner">
 <div class="card">
 <div class="frontface">
@@ -120,19 +119,19 @@
 				}
 			?>
 		<div class="details">
-		<div <?php post_class(); ?>>
-			<h2>
-				<a title="<?php the_title_attribute(); ?>" href="<?php the_permalink() ?>"><?php the_title(); ?></a>
-			</h2>
-			<p class="gray author mini uppercase">
-				By <?php yo_author(); ?>
-			</p>
-			<div class="entry-summary">
-			 <div class="centerText">
-				<?php the_excerpt(); ?>
-			 </div>
+			<div <?php post_class(); ?>>
+				<h2>
+					<a title="<?php the_title_attribute(); ?>" href="<?php the_permalink() ?>"><?php the_title(); ?></a>
+				</h2>
+				<p class="gray author mini uppercase">
+					By <?php yo_author(); ?>
+				</p>
+					<div class="entry-summary">
+						<div class="centerText">
+							<?php the_excerpt(); ?>
+						</div>
+					</div>
 			</div>
-		</div>
 		</div>		
 	</div>
 	<?php
@@ -181,7 +180,7 @@
 		<div class="launch-box">
 			<img src="<?php echo get_template_directory_uri(); ?>/images/launch.png" />
 			<div class="text">
-				<a href="<?php echo site_url(); ?>/launch" ?>
+				<a href="<?php echo site_url(); ?>/launch" >
 				watch our welcome video
 				</a>
 			</div>
@@ -259,7 +258,7 @@
 		<article>
 			<?php the_full_title_1() ?>
 			<img id="overlay" src="<?php echo get_template_directory_uri(); ?>/images/playbutton.png" height="102" width="152">
-			<img src="<?php if(has_post_thumbnail()){$src = wp_get_attachment_image_src(get_post_thumbnail_id());echo $src[0];}else{video_thumbnail();} ?>" height="102"/>
+			<img src="<?php if(has_post_thumbnail()){$src = wp_get_attachment_image_src(get_post_thumbnail_id());echo $src[0];}else{video_thumbnail();} ?>" height="102">
 			</a>
 			<div class="clear"></div>
 			<p class="left gray mini uppercase">Video</p>
@@ -425,6 +424,7 @@
 		</div>
 		<div class="clear"></div>
 	</div>
+	
 	<div class="clear"></div>
 	<div id="ChronBottomFeatures" class="pop">
 		<h4 class="usatoday features"><a href="<?php echo site_url(); ?>/features/" class="section-link">Features</a></h4>
@@ -470,6 +470,7 @@
 		}
 	?>
 	</div>
+	
 	<div class="right-side">
 	<?php
 		$query = new WP_Query(array( 'post_type' => 'features', 'posts_per_page' => 2, 'post__not_in' => $poet, 'features_importance' => 'section_slider' ) );
@@ -626,6 +627,7 @@
 		</ul></div>
 	<div class="clear"></div>
 </div>
+
 
 <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.aw-showcase.min.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/home.js"></script>
