@@ -1,0 +1,9 @@
+uploads
+plugins
+wp-content/uploads/
+wp-content/plugins/
+wp-content/upgrade/
+sitemao.xml
+*.log
+wp-content/cache/
+sitemap.xml.gz
