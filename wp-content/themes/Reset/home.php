@@ -375,11 +375,11 @@
 		<div class="annoyingbar moveable"><?php the_issue_link($current_month); echo first_word(get_formal_issue_month($current_month)); ?> Issue</a></div>
 		<article <?php post_class("one"); ?>>
 	<?php
-	$query = new WP_Query(array( 'post_type' => 'opinion', 'issue_month' => $curmonth, 'posts_per_page' => 1, 'opinion_type' => "editorial",'meta_key' => '_thumbnail_id' ) );
+	$query = new WP_Query(array( 'post_type' => 'opinion', 'issue_month' => $curmonth, 'posts_per_page' => 2, 'opinion_type' => "editorial",'meta_key' => '_thumbnail_id' ) );
 		if($query->found_posts ==0){
 		$query = new WP_Query(array( 'post_type' => 'opinion', 'posts_per_page' => 2, 'issue_month' => $curmonth, 'opinion_type' => 'editorial' ) );
 		}else{
-			$query = new WP_Query(array( 'post_type' => 'opinion', 'posts_per_page' => 1, 'issue_month' => $curmonth, 'opinion_type' => 'editorial' ) );
+			$query = new WP_Query(array( 'post_type' => 'opinion', 'posts_per_page' => 2, 'issue_month' => $curmonth, 'opinion_type' => 'editorial' ) );
 		}
 		while($query->have_posts()) { $query->the_post();
 		$wp_query->in_the_loop = true;

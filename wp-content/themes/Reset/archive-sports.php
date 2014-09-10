@@ -49,7 +49,8 @@
 						
 						if(has_post_thumbnail()){
 							the_post_thumbnail("section-slider");
-						}	
+						}
+						else{echo "alt";}	
 						?>
 						</a>
 					</div>

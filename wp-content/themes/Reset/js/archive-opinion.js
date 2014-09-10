@@ -75,10 +75,14 @@ if($('#ArchiveBottom.opinion .blog').length != 0){
 	else
 	    $("#ArchiveBottom.opinion .columns").height($("#ArchiveBottom.opinion .blog").outerHeight()+$("#ArchiveBottom.opinion .guest").outerHeight());
 }else{
-	if($("#ArchiveBottom.opinion .columns").outerHeight()>($("#ArchiveBottom.opinion .editor").outerHeight()+$("#ArchiveBottom.opinion.guest").outerHeight()))
-	    $("#ArchiveBottom.opinion .guest").height($("#ArchiveBottom.opinion .columns").height()-$("#ArchiveBottom.opinion .editor").height()-10);
+	if($("#ArchiveBottom.opinion .columns").outerHeight() > ($("#ArchiveBottom.opinion .letters").outerHeight() + $("#ArchiveBottom.opinion.guest").outerHeight())){
+		if($("#ArchiveBottom.opinion .guest").length === 0)
+			$("#ArchiveBottom.opinion .letters").height($("#ArchiveBottom.opinion .columns").outerHeight());
+		else
+	    	$("#ArchiveBottom.opinion .guest").height($("#ArchiveBottom.opinion .columns").height() - $("#ArchiveBottom.opinion .editor").height()-10);
+	}
 	else
-	    $("#ArchiveBottom.opinion .columns").height($("#ArchiveBottom.opinion .editor").outerHeight()+$("#ArchiveBottom.opinion .guest").outerHeight());
+	    $("#ArchiveBottom.opinion .columns").height($("#ArchiveBottom.opinion .letters").outerHeight()+$("#ArchiveBottom.opinion .guest").outerHeight());
 }
 
 	$("#showcase ").awShowcase(

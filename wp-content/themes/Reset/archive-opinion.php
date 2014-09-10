@@ -25,7 +25,7 @@
 		<div class="annoyingbar moveable uppercase"><a href="javascript:void(0);">Click for more Editorials</a></div>
 	<?php
 		$query = new WP_Query(array( 'post_type' => 'opinion', 'issue_month' => $curmonth, 'posts_per_page' => 1, 'opinion_type' => "editorial",'meta_key' => '_thumbnail_id' ) );
-		if($query->found_posts ==0){
+		if($query->found_posts == 0){
 		$query = new WP_Query(array( 'post_type' => 'opinion', 'posts_per_page' => 3, 'opinion_type' => "editorial" ) );
 		while($query->have_posts()) { $query->the_post();
 		echo "<br><br>";
@@ -53,7 +53,7 @@
 				}
 			?>		</div>
 			<?php 
-				}else{echo "<br><br>";}
+				}else{echo "<br><br>";$pic = false;}
 			?>
 		<div class="main-opinion">
 			<p class="left mini uppercase sans-serif1 bold">EDITORIAL</p>
@@ -132,7 +132,7 @@
 
 	<?php
 	   $query = new WP_Query(array( 'post_type' => 'opinion', 'posts_per_page' => -1, 'issue_month' => $curmonth, 'opinion_type' => "guest_column"));
-	   $column = array(0, $query->found_posts + $amount);
+	   $column = array(0, $query->found_posts);
 		$query = new WP_Query(array( 'post_type' => 'opinion', 'issue_month' => $curmonth, 'posts_per_page' => 0, 'opinion_type' => "column", 'meta_key' => '_thumbnail_id'));
 		if($query->have_posts()) { $query->the_post();
 		$poet[] = get_the_ID();
@@ -154,7 +154,7 @@
 					$i = new CoAuthorsIterator();
 					$i->iterate();
 				?>
-				<a href=<?php the_permalink(); ?>><?php userphoto_the_author_photo(); ?></a>
+				<?php userphoto_the_author_photo(); ?>
 			</div>
 			<article class="right column-article">
 				<p class="font20 bold"><?php the_full_title(); ?></p>
@@ -164,15 +164,16 @@
 			</article>
 			<div class="clear"></div>
 		</div>
+	<?php } ?>
+		<hr>
 	<?php
-		}
-	    $column[1] = $column[1] + $column[0];
+	    $column[1] = $column[1] + 2 + $column[0];
 		$query = new WP_Query(array( 'post_type' => 'opinion', 'issue_month' => $curmonth, 'posts_per_page' => $column[1], 'opinion_type' => "column", 'post__not_in' => $poet));
-		while($query->have_posts() && $column[1] > 0) { $query->the_post();
+		$column[1] =  $query->found_posts - $column[1];
+		while($query->have_posts()) { $query->the_post();
 		$poet[] = get_the_ID();
 		$wp_query->in_the_loop = true;
 	?>
-		<hr>
 		<div class="opinion-column">
 			<div class="mini-profile left">
 				<?php
@@ -199,14 +200,13 @@
 			opinion_blog();
 		?>
 	</div>*/?>
-<?php if($type == 'Letter'){ ?>
 <!-- 	LETTERS -->
-	<div class="letters editor pop">
+	<div class="letters pop">
 		<h4 class="usatoday uppercase opinion"><a class="whitelink" href="<?php echo site_url(); ?>/opinion_type/letter">Letters to the editor</a></h4>
 		<div class="annoyingbar moveable uppercase"><a href="javascript:void(0);">Click for more letters</a></div>
 
 	<?php
-		$query = new WP_Query(array( 'post_type' => 'opinion', 'posts_per_page' => $amount, 'opinion_type' => "letter"));
+		$query = new WP_Query(array( 'post_type' => 'opinion', 'posts_per_page' => 2, 'opinion_type' => "letter"));
 		while($query->have_posts()) { $query->the_post();
 		$poet[] = get_the_ID();
 		$wp_query->in_the_loop = true;
@@ -223,46 +223,16 @@
 		}
 	?>
 	</div>
-	<?php }else{ ?>
-	<!-- 	BLOG -->
-	<div class="blog pop">
-		<h4 class="usatoday uppercase opinion"><a class="whitelink" href="<?php echo site_url(); ?>/opinion_type/blog">Blog</a></h4>
-		<div class="annoyingbar moveable uppercase"><a href="javascript:void(0);">Click for more blog posts</a></div>
-
 	<?php
-		$query = new WP_Query(array( 'post_type' => 'opinion', 'posts_per_page' => $amount, 'opinion_type' => "blog"));
-		while($query->have_posts()) { $query->the_post();
-		$poet[] = get_the_ID();
-		$wp_query->in_the_loop = true;
+	$query = new WP_Query(array( 'post_type' => 'opinion', 'posts_per_page' => -1, 'issue_month' => $curmonth, 'opinion_type' => "guest_column"));
+	if($query->have_posts()){
 	?>
-		<div class="opinion-column">
-			<div class="mini-profile left">
-				<?php
-					$i = new CoAuthorsIterator();
-					$i->iterate();
-				?>
-				<a href=<?php the_permalink(); ?>><?php userphoto_the_author_photo(); ?></a>
-			</div>
-			<article class="blog-article">
-				<p class="font20 bold"><?php the_full_title(); ?></p>
-				<p class="uppercase gray mini left">By <?php the_author_posts_link(); ?></p>
-				<div class="clear"></div>
-				<div class="sans-serif1 font12 "><?php the_excerpt(); ?></div>
-			</article>
-			<div class="clear"></div>
-		</div>
-	<?php }?>
-	</div>
-	<?php } ?>
 	<div class="guest letters pop">
 		<h4 class="usatoday uppercase opinion"><a class="whitelink" href="<?php echo site_url(); ?>/opinion_type/guest_column">Guest Columns</a></h4>
 		<div class="annoyingbar moveable uppercase"><a href="javascript:void(0);">Click for more guest columns</a></div>
 
 	<?php
-		$query = new WP_Query(array( 'post_type' => 'opinion', 'posts_per_page' => -1, 'issue_month' => $curmonth, 'opinion_type' => "guest_column"));
-		if($query == 0){
-			$query = new WP_Query(array( 'post_type' => 'opinion', 'posts_per_page' => 2, 'opinion_type' => "guest_column"));
-		}
+		
 		while($query->have_posts()) { $query->the_post();
 		$poet[] = get_the_ID();
 		$wp_query->in_the_loop = true;
@@ -279,6 +249,9 @@
 		}
 	?>
 	</div>
+	<?php
+	}
+	?>
 	<div class="clear"></div>
 	
 <!-- 	MORE COLUMNS -->
