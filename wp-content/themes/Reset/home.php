@@ -168,15 +168,24 @@
 		wp_reset_postdata();
 	?>
 	<div id="ChronTopRight">
-	<div class="fb-like-box" data-href="http://www.facebook.com/thehwchronicle" data-width="240" data-height="290" data-show-faces="true" data-stream="false" data-header="false"></div>
+	<?php if ($display == "twitter"): ?>
+	<div id="twitter_container">
+		<a class="twitter-timeline" data-dnt="true" href="https://twitter.com/hw_chronicle" data-widget-id="512818077746991104">Tweets by @hw_chronicle</a>
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+	</div>
+	<?php else: ?>
+	<div id="facebook_container">
+		<div class="fb-like-box" data-href="http://www.facebook.com/thehwchronicle" data-width="240" data-height="290" data-show-faces="true" data-stream="false" data-header="false"></div>
 		<div class="fb-like-box-filler"></div>
+		<div class="twitter-button">
+				<?php twitter_code_3(); ?>
+		</div>
+	</div>
+	<? endif; ?>
 <!--
 		<h4 class="uppercase">Subscribe To Weekly Newsletters</h4>
 		<input type="text" placeholder="Submit email here" />
 -->
-		<div class="twitter-button">
-			<?php twitter_code_3(); ?>
-		</div>
 		<div class="launch-box">
 			<img src="<?php echo get_template_directory_uri(); ?>/images/launch.png" />
 			<div class="text">

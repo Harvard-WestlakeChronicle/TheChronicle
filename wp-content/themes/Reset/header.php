@@ -185,9 +185,3 @@ Contact me at dwoldenberg1@gmail.com for any questions or anything at all.
 <script>var template_directory = '<?php echo get_template_directory_uri(); ?>';</script>
 <!-- Confetti shamefully stolen from http://metervara.net/ - he's a genius check him out -->
 
-<!-- Net Neutrality -->
-<script type="text/javascript">
-    var _bftn_options = { animation: 'banner' }
-</script>
-<script src="//widget.battleforthenet.com/widget.min.js" async></script>
-

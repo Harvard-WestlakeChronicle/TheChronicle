@@ -2406,7 +2406,7 @@ add_filter( 'admin_post_thumbnail_html', 'custom_admin_post_thumbnail_html' );
 	        $widget_options = MainFunction_Options();
 	 
 		echo 'David Gisser singlehandedly made this.  Hit configure to change season^<br />';
-		echo "You have selected {$widget_options['season']}<br />";
+		echo "You have selected <b>{$widget_options['season']}</b><br />";
 	}
 	 
 	/**
@@ -2462,6 +2462,72 @@ add_filter( 'admin_post_thumbnail_html', 'custom_admin_post_thumbnail_html' );
 	 * use hook, to integrate new widget
 	 */
 	add_action('wp_dashboard_setup', 'MainFunction_Init');
+	
+	
+	/**
+	 * Round Two (Ding Ding): Content of Dashboard-Widget
+	 */
+	function secondaryFunction() {
+	        $widget_options = secondaryFunction_Options();
+	 
+		echo 'Hit configure to switch between displaying Facebook and Twitter widgets^<br />';
+		echo 'This widget was created by David Woldenberg. <br/>';
+		echo "You have selected <b>{$widget_options['display']}</b>.<br />";
+	}
+	/**
+	 * add Dashboard Widget via function wp_add_dashboard_widget()
+	 */
+	function secondaryFunction_Init() {
+		wp_add_dashboard_widget( 'secondaryFunction', __( 'Twitter/Facebook' ), 'secondaryFunction', 'secondaryFunction_Setup' );
+	}
+	
+	function ReturnWidgetTwo(){
+		$widget_options = secondaryFunction_Options();
+		return $widget_options['display'];
+	}
+	$display = ReturnWidgetTwo();
+	 
+	function secondaryFunction_Options() {
+		$defaults = array( 'display' => 'facebook');
+		if ( ( !$options = get_option( 'secondaryFunction' ) ) || !is_array($options) )
+			$options = array();
+		return array_merge( $defaults, $options );
+	}
+	 
+	function secondaryFunction_Setup() {
+	 
+		$options = secondaryFunction_Options();
+	 
+		if ( 'post' == strtolower($_SERVER['REQUEST_METHOD']) && isset( $_POST['widget_id'] ) && 'secondaryFunction' == $_POST['widget_id'] ) {
+			foreach ( array( 'display') as $key )
+					$options[$key] = $_POST[$key];
+			update_option( 'secondaryFunction', $options );
+		}
+	 
+	?>
+	 
+	 		<p>
+			<label for="display">
+	<select id="display" name="display" class="widefat">
+					<?PHP
+						$optionss = array('facebook', 'twitter');
+						foreach ($optionss as $option)
+							echo "<option value='$option'" . ( $options['display'] == $option ? " selected='selected'" : '' ) . ">$option</option>";
+					?>
+				</select>
+	 
+			</label>
+			</p>
+	
+	 
+	 
+	<?PHP
+	 }
+	/**
+	 * use hook, to integrate new widget
+	 */
+	add_action('wp_dashboard_setup', 'secondaryFunction_Init');
+
 	/*
 	
 	
