@@ -2,6 +2,8 @@ uploads
 plugins
 wp-content/uploads/
 wp-content/plugins/
+wp-content/updraft/
+wp-content/upgrade/
 sitemap.xml
 *.log
 wp-content/cache/
