@@ -3,7 +3,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-	<title>Fair Game</title>
+	<title>The Harvard-Westlake Chronicle - Fair Game</title>
 
 	<link href="css/reset.css"  rel="stylesheet" type="text/css" />
 	<link href="css/chrome.css" rel="stylesheet" type="text/css" />
@@ -23,16 +23,18 @@
 	<script type="text/javascript" src="js/parallax.js"           ></script>
 	<script>
 		$(document).ready(function(){
-			/*var urls = ["js/jquery-1.7.1.js", "js/side-nav.js", "js/backgrounds.js", "js/kinetics.js"];
-			for (i =0; i < urls.length; ++i){
-				var s = document.createElement("script");
-				s.type = "text/javascript";
-				s.src = urls[];
-				$("head").append(s);
-
-			}*/
 			$('img[src="images/fair_game_2.jpg"]').css("width", "100%");
 		});
+	</script>
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-35308943-1', 'auto');
+	  ga('send', 'pageview');
+
 	</script>
 
 </head>
@@ -70,7 +72,7 @@
 
 		<section id="story-drop" class="story-drop">
 			<div class="story wtext">
-				<blockquote class="blockq">
+				<blockquote class="blockq right">
 					<p>“My message to them was… all athletes male and female are to be respected and to be treated fairly, no matter what sport they play and no matter what gender they are,” Barnum said.</p>
 				</blockquote>
 			</div>
@@ -91,7 +93,7 @@
 		
 		<section id="story-drop" class="story-drop">
 			<div class="story wtext">
-				<blockquote class="blockq">
+				<blockquote class="blockq left">
 					<p>“Though I’ve never experienced anything bad, it could be different across different sports, depending on the culture around the team,” Milly said. “Field hockey, for example, doesn’t have a boys’ equivalent, and there’s definitely a negative, girly stigma around it.”</p>
 				</blockquote>
 			</div>
@@ -132,7 +134,7 @@
 		
 		<section id="story-drop" class="story-drop">
 			<div class="story wtext">
-				<blockquote class="blockq">
+				<blockquote class="blockq right">
 					<p>“It's a lot easier to categorize this as an isolated incident rather than face the problem head on,” Spitz said. “The fact that this kind of behavior goes on at all is cause for concern, and writing it off as not reflective of the school's athletic culture is a mistake.”</p>
 				</blockquote>
 			</div>
@@ -154,20 +156,5 @@
 			</div>
 		</section>
 	</div>
-
-	<!-- Asynchronous google analytics; this is the official snippet.
-	 Replace UA-XXXXXX-XX with your site's ID and uncomment to enable.
-	 -->
-<script>
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-35308943-1']);
-  _gaq.push(['_trackPageview']);
-  (function() {
-	  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; 
-	  ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
-	  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-	  })();
-</script>
 </body>
 </html>

@@ -86,7 +86,6 @@
 	color: black;
 }
 .blockq{
-	float: right;
 	width: 8em;
 	color: #030;
 	font-size: 4em;
@@ -94,6 +93,12 @@
 	font-style: italic;
 	padding: 0.5em;
 	margin: 0;
+}
+.right {
+	float: right;
+}
+.left {
+	float: left;
 }
 .blockq p:first-letter {
 	font-size: 3.5em;
@@ -111,11 +116,13 @@
     display: none;
     margin: 0;
     z-index: 1;
+    font-family : "Caecilia-Light", 'Helvetica Neue', Arial, Helvetica, sans-serif;
 }
 
 .go-back:hover {
     color: #5e0000;
     text-decoration: none;
+    font-family : "Caecilia-Light", 'Helvetica Neue', Arial, Helvetica, sans-serif;
 }
 .author {
 	font-style: italic;
@@ -131,11 +138,10 @@
 	color: white;
 	padding-right: 10px;
 	padding-bottom: 10px;
+	font-family : "Caecilia-Light", 'Helvetica Neue', Arial, Helvetica, sans-serif;
 }
 
 .end {
 	position: absolute;
 	overflow: hidden;
-	translateY(0px);
-	-webkit-translateY(0px);
 }
