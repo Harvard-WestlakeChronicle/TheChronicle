@@ -8,3 +8,6 @@ sitemap.xml
 *.log
 wp-content/cache/
 sitemap.xml.gz
+*.jpg
+*.png
+*.jpeg

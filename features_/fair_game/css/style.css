@@ -1,0 +1,141 @@
+/***************
+ * Intro Panel *
+ ***************/
+.story-header {
+	color : #666;
+}
+
+.story-header h1 {
+	font-family: Georgia, Times, "Times New Roman", serif;
+	//font-family: "Caecilia-Roman", Verdana, sans-serif;
+	font-style: italic;
+	font-size: 100px;
+	color: white;
+	border-bottom: thin solid #ffffff;
+	
+}
+.story-header p {
+	color: white;
+	font-size: 22px;
+	padding-top: 0px;
+	width     : 861px;
+}
+
+.story-header .story {
+	width         : 850px;
+	padding-right : 0px;
+}
+
+#header-main {
+	text-align: center;
+}
+
+/***************
+ * Intel Panel *
+ ***************/
+.story-intel {
+	color      : #FFF;
+}
+
+/*********************
+ * Block quote *
+ *********************/
+.story-drop {
+	color      : #CCC;
+	background : #000;
+}
+
+.story-drop .bg {
+	left  : auto;
+	right : 0px;
+}
+
+/**************
+ * Misc *
+ **************/
+.blur {
+	-webkit-filter: blur(2px);
+	-moz-filter   : blur(2px);
+	-ms-filter    : blur(2px);
+	-o-filter     : blur(2px);
+	filter        : blur(2px);
+}
+.anti-blur {
+	-webkit-filter: blur(0px);
+	-moz-filter   : blur(0px);
+	-ms-filter    : blur(0px);
+	-o-filter     : blur(0px);
+	filter        : blur(0px);
+	}
+.btext p{
+	color: black;
+	text-align: left;
+	font-size: 20px;
+}
+.btext p first{
+	padding-top: 40px;
+}
+.wtext p{
+	color: white;
+	text-align: left;
+	font-size: 20px;
+}
+#drop {
+	font-size: 50px;
+	font-style: oblique;
+	color: black;
+}
+.blockq{
+	float: right;
+	width: 8em;
+	color: #030;
+	font-size: 4em;
+	line-height: 0.9;
+	font-style: italic;
+	padding: 0.5em;
+	margin: 0;
+}
+.blockq p:first-letter {
+	font-size: 3.5em;
+	font-weight: bold;
+}
+.go-back {
+    position: fixed;
+    bottom: 0.75em;
+    left: 0.5em;
+    text-decoration: none;
+    color: white;
+    background-color: #a4a4a4;
+    font-size: 12px;
+    padding: 10px;
+    display: none;
+    margin: 0;
+    z-index: 1;
+}
+
+.go-back:hover {
+    color: #5e0000;
+    text-decoration: none;
+}
+.author {
+	font-style: italic;
+	font-size: 20px;
+	font-family: Caecilia-Roman, Verdana, sans-serif;
+}
+.designer {
+	display: inline;
+	position: fixed;
+	z-index: 1;
+	bottom: 0px;
+	right: 0px;
+	color: white;
+	padding-right: 10px;
+	padding-bottom: 10px;
+}
+
+.end {
+	position: absolute;
+	overflow: hidden;
+	translateY(0px);
+	-webkit-translateY(0px);
+}
