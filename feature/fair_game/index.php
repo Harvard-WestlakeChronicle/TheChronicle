@@ -52,7 +52,6 @@
 					<p style="line-height: 30px;"><span class="author">By Zoe Dutton</span></p>
 					<p>While female athletic teams prove their prowess on the court, field and in the pool,<br>the majority of students believe they are treated differently than their male counterparts.</p>
 					<p>Scroll down to contine reading</p>
-					<img src="images/infographic-2.png" />
 				</div>
 			</div>
 		<span class="designer">Design by David Woldenberg</span>
