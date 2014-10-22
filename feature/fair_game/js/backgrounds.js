@@ -20,7 +20,7 @@ $(function(){
 			fRW = $section.width()  / oData.width;
 			fRH = $section.height() / oData.height;
 
-			$item.css( { width: 'auto', height: 'auto' } ).css( fRW > fRH ? 'width' : 'height', '100%' );
+			$item.css( { width: '100%', height: 'auto' } ).css( fRW > fRH ? 'width' : 'height', '100%' );
 
 			$section.detach();
 		}

@@ -119,7 +119,7 @@ Contact me at dwoldenberg1@gmail.com for any questions or anything at all.
 	<meta property="og:description" content="The award-winning student newspaper of Harvard-Westlake"/>
 	<meta property="fb:app_id" content="249052195198188" />
 	<?php } ?>
-	
+	<!-- Testing gitpush on 10/21/14 -->
 	
 	<!--  Mobile Viewport meta tag
 	j.mp/mobileviewport & davidbcalhoun.com/2010/viewport-metatag 

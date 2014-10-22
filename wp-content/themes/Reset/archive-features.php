@@ -102,7 +102,7 @@
 		<div class="annoyingbar"></div>
 		<div class="one">
 		<?php
-			$query = new WP_Query(array( 'post_type' => 'features', 'issue_month' => $curmonth, 'posts_per_page' => 1, 'post__not_in' => $poet, 'meta_key' => '_thumbnail_id' ) );
+			$query = new WP_Query(array( 'post_type' => 'features', 'issue_month' => $curmonth, 'posts_per_page' => 3, 'post__not_in' => $poet, 'meta_key' => '_thumbnail_id' ) );
 			if($query->have_posts()) { $query->the_post();
 			$poet[] = get_the_ID();
 			$wp_query->in_the_loop = true;
