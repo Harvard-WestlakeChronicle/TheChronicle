@@ -54,12 +54,12 @@
 	'meta_query' => array(
 		'relation' => 'OR',
 		'replace_and' => true, // Flag for the dark magic
-		0 => array(
+		array(
 			'key'     => 'first_name',
 			'value'   => $s,
 			'compare' => 'LIKE'
 		),
-		1 => array(
+		array(
 			'key'     => 'last_name',
 			'value'   => $s,
 			'compare' => 'LIKE'

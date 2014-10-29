@@ -4,7 +4,7 @@
 <!--[if IE 7 ]> <![endif]-->
 <!--[if IE 8 ]> <![endif]-->
 <!--[if IE 9 ]> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html class=""> <!--<![endif]-->
+<!--[if (gt IE 9)|!(IE)]><html class=""> <![endif]-->
 <html class="no-js" <?php language_attributes(); ?>>
 <!-- the "no-js" class is for Modernizr. -->
 
@@ -36,8 +36,8 @@ Contact me at dwoldenberg1@gmail.com for any questions or anything at all.
 	<meta charset="<?php bloginfo('charset'); ?>">
 	
 	<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	
+	<meta http-equiv="X-UA-Compatible" content="IE=10,chrome=1">
+
 	<?php if (is_search()) { ?>
 	<meta name="robots" content="noindex, nofollow" /> 
 	<?php } ?>

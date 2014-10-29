@@ -36,8 +36,6 @@
 	  })();
 </script>
 
-</script>
-
 <script src="<?php bloginfo('template_directory'); ?>/js/creative.js"></script>
 </body>
 
