@@ -42,7 +42,7 @@
 	<!-- this is to make the page's vertical scrollbar appear the correct height -->
 	<div id="mock-scroller"></div>
 
-	<a href="/" class="go-back" style="display: inline;">Back to HWchronicle</a>
+	<a href="/news/fair-game/" class="go-back" style="display: inline;">View the Regular Story</a>
 	<div id="content">	
 		<section id="story-header" class="photo story-header">
 			<img class="bg animate blur" width="100%" src="images/fair_game_2.jpg" anim-detached="true" />
