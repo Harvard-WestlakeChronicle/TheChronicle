@@ -223,7 +223,7 @@
 							<?php the_full_title(); ?>
 						</p>
 						<script>
-							$('[title="Fair Game"]').attr("href", "/feature/fair_game/");
+							$('[title="Fair Game"]').attr("href", "/fair-game/");
 						</script>
 						<p class="mini gray uppercase">
 							By <?php yo_author(); ?>

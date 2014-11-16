@@ -5,25 +5,25 @@
 
 	<title>The Harvard-Westlake Chronicle - Fair Game</title>
 
-	<link href="css/reset.css"  rel="stylesheet" type="text/css" />
-	<link href="css/chrome.css" rel="stylesheet" type="text/css" />
-	<link href="css/style.css"     rel="stylesheet" type="text/css" />
+	<link href="<?php bloginfo('template_directory') ?>/feature/fair_game/css/reset.css"  rel="stylesheet" type="text/css" />
+	<link href="<?php bloginfo('template_directory') ?>/feature/fair_game/css/chrome.css" rel="stylesheet" type="text/css" />
+	<link href="<?php bloginfo('template_directory') ?>/feature/fair_game/css/style.css"     rel="stylesheet" type="text/css" />
 
 	<!--[if lt IE 9]>
 		<script src="js/html5.js"></script>
 	<![endif]-->
 
-	<script type="text/javascript" src="js/jquery-1.7.1.js"></script>
-	<script type="text/javascript" src="js/side-nav.js"></script>
-	<script type="text/javascript" src="js/backgrounds.js"></script>
-	<script type="text/javascript" src="js/kinetics.js"></script>
+	<script type="text/javascript" src="<?php bloginfo('template_directory') ?>/feature/fair_game/js/jquery-1.7.1.js"></script>
+	<script type="text/javascript" src="<?php bloginfo('template_directory') ?>/feature/fair_game/js/side-nav.js"></script>
+	<script type="text/javascript" src="<?php bloginfo('template_directory') ?>/feature/fair_game/js/backgrounds.js"></script>
+	<script type="text/javascript" src="<?php bloginfo('template_directory') ?>/feature/fair_game/js/kinetics.js"></script>
 
 	<!-- parallax.js really screws with the DOM, so make sure it's included last so other things don't notice :) -->
 	<!-- https://github.com/razorfish/Parallax-JS -->
-	<script type="text/javascript" src="js/parallax.js"           ></script>
+	<script type="text/javascript" src="<?php bloginfo('template_directory') ?>/feature/fair_game/js/parallax.js"></script>
 	<script>
 		$(document).ready(function(){
-			$('img[src="images/fair_game_2.jpg"]').css("width", "100%");
+			$('img[src="<?php bloginfo('template_directory') ?>/feature/fair_game/images/fair_game_2.jpg"]').css("width", "100%");
 		});
 	</script>
 	<script>
@@ -45,7 +45,7 @@
 	<a href="/news/fair-game/" class="go-back" style="display: inline;">View the Regular Story</a>
 	<div id="content">	
 		<section id="story-header" class="photo story-header">
-			<img class="bg animate blur" width="100%" src="images/fair_game_2.jpg" anim-detached="true" />
+			<img class="bg animate blur" width="100%" src="<?php bloginfo('template_directory') ?>/feature/fair_game/images/fair_game_2.jpg" anim-detached="true" />
 			<div class="story">
 				<div id="header-main">
 					<h1>Fair Game</h1>
@@ -110,7 +110,7 @@
 		</section>
 
 		<section id="story-header" class="photo story-header">
-			<img class="bg animate" width="100%" min-width="100%" src="images/infographic.jpg" anim-detached="true" />
+			<img class="bg animate" width="100%" min-width="100%" src="<?php bloginfo('template_directory') ?>/feature/fair_game/images/infographic.jpg" anim-detached="true" />
 		</section>
 		
 		<section id="story-intel" class="story-intel">
