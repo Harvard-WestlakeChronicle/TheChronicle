@@ -527,6 +527,7 @@ function i_have_no_friends($issue_month){
 <?php
 		
 		while($query->have_posts()) { $query->the_post();
+			global $wp_query;
 			$wp_query->in_the_loop = false;
 			$count++;
 			$last_was_left = !$last_was_left;

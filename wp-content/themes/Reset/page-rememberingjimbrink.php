@@ -36,9 +36,9 @@
 		<div class="right">
 			<h3>Remembering Jim.</h3>
 			<p>
-				Share your memories and photos of Jim Brink who died on Nov. 12, 2014.  The Chronicle will run an obituary celebrating Carr's life and time at Harvard-Westlake in its November issue.
+				Share your memories and photos of Jim Brink who died on Nov. 12, 2014.  The Chronicle will cover the memorial service being held in his honor on November 20th at 4 p.m. in St. Saviour's Chapel at the Upper School.
 			</p>
-			<a class="readmore" href="http://www.hwchronicle.com/news/xxxx/">Read more: "xxxx"</a>
+			<a class="readmore" href="http://www.hwchronicle.com/news/community-mourns-loss-of-science-teacher/">Read more: "Community Mourns Loss of Science Teacher"</a>
 		</div>
 	
 	</div>
