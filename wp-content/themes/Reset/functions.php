@@ -107,6 +107,11 @@ function wpse5742_author_link( $link, $author_id, $author_nicename )
 
 add_action('show_user_profile', 'my_user_profile_edit_action');
 add_action('edit_user_profile', 'my_user_profile_edit_action');
+
+function my_user_profile_edit_action($user) {
+	echo "<input type='hidden' value='Austin, what does this do? You have confused the Davids (Woldenberg and Gisser)' />";
+}
+
 add_filter('user_contactmethods', 'my_user_contactmethods');  
                
 function my_user_contactmethods($user_contactmethods){  

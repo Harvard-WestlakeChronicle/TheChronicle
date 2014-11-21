@@ -36,7 +36,7 @@
 		<div class="right">
 			<h3>Remembering Jim.</h3>
 			<p>
-				Share your memories and photos of Jim Brink who died on Nov. 12, 2014.  The Chronicle will cover the memorial service being held in his honor on November 20th at 4 p.m. in St. Saviour's Chapel at the Upper School.
+				Share your memories and photos of Jim Brink who died on Nov. 12, 2014.  You can view the gallery of the memorial service held in his honor on November 20th in St. Saviour's Chapel <a class="readmore" href="http://www.hwchronicle.com/photo/students-faculty-alumni-family-attend-memorial-service-for-brink/" style="font-size: initial;" >here</a>. You can also click <a class="readmore" href="http://www.hwchronicle.com/photo/a-celebration-of-jim-brink/" style="font-size: initial;"> here </a> to view our gallery titled "A Celebration of Jim Brink."
 			</p>
 			<a class="readmore" href="http://www.hwchronicle.com/news/community-mourns-loss-of-science-teacher/">Read more: "Community Mourns Loss of Science Teacher"</a>
 		</div>
