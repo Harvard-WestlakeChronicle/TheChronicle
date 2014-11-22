@@ -14,6 +14,12 @@
 		<div class="three"></div>
 		<div class="four"></div>
 	</div>
+	<style>
+		.wp-pagenavi, .pages, .page, .last, .nextpostslink
+		{
+			color: white;
+		}
+	</style>
 </header>
 <div id="ArchiveBottom" class="photos inner">
 	<div class="main pop tint">

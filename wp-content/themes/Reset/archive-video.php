@@ -15,6 +15,12 @@
 		<div class="three"></div>
 		<div class="four"></div>
 	</div>
+	<style>
+		.wp-pagenavi, .pages, .page, .nextpostslink
+		{
+			color: white;
+		}
+	</style>
 </header>
 <div id="ArchiveBottom" class="videos inner">
 <?php
