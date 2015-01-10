@@ -362,10 +362,22 @@ hr.flair:after {
 	position:absolute;
 	top:60px;
 	font-size:10px;
-	left: 78%;
+	left: 88%;
 	margin:0;
 	font-family:Verdana;
 	margin-right:10px;
+}
+.viewall-news {
+	left: 90% !important;
+}
+.viewall-sports {
+	left: 89% !important;
+}
+.viewall-opinion {
+	left: 89% !important;
+}
+.viewall-ae {
+	left: 91% !important;
 }
 #big-header-flaglink{
 	display:inline-block;
@@ -3859,6 +3871,8 @@ div.pagepicker{
 	min-height:300px;
 	margin-top:10px;
 	padding:10px 20px;
+	margin-left: auto;
+    margin-right: auto;
 }
 #SearchResults .result-text{
 	float:left;

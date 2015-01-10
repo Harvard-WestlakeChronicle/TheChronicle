@@ -11,6 +11,9 @@
 		</span>
 	</p>
 	<img src="<?php bloginfo('template_directory'); ?>/images/cool/news.png" id="announce"/>
+	<p id="small-header-viewall" class="uppercase viewall-news">
+		<a href="<?php echo site_url(); ?>/all-news/">View all news</a>
+	</p>
 	<div id="ticker"  class="lowercase">
 		<?php get_recent_tags("news"); ?>
 	</div>

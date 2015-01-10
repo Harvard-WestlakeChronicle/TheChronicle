@@ -9,7 +9,7 @@
 $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 
 // the query
-$type='features';
+$type='news';
 $args=array(
   'post_type' => $type,
   'post_status' => 'publish',
@@ -26,15 +26,15 @@ $my_query = new WP_Query( $args );
 <?php include("inc/snubbed-nav.php"); ?>
 <?php $curmonth = curmonth(); $curyear = curyear(); ?>
 
-<header id="snubbed-header" class="pop inner ArchiveTop features">
+<header id="snubbed-header" class="pop inner ArchiveTop news">
 	<p id="small-header-lastupdated" class="uppercase">
 		<?php just_tell_me($curmonth); ?> ISSUE
 	</p>
-	<img src="<?php bloginfo('template_directory'); ?>/images/cool/features.png" id="announce"/>
+	<img src="<?php bloginfo('template_directory'); ?>/images/cool/news.png" id="announce"/>
 	<p id="small-header-viewall" class="uppercase">
 	</p>
 	<div id="ticker">
-		<?php get_recent_tags('features'); ?>
+		<?php get_recent_tags('newss'); ?>
 	</div>
 </header>
 

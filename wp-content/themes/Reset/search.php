@@ -14,7 +14,10 @@
 
 
 	<?php /* Search Count */ 
-	$allsearch = &new WP_Query("s=$s&showposts=-1"); 
+	// set the "paged" parameter (use 'page' if the query is on a static front page)
+	$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+	
+	$allsearch = new WP_Query("s=$s&showposts=-1"); 
 	$key = wp_specialchars($s, 1); 
 	$count = $allsearch->post_count; _e('');
 	
@@ -77,7 +80,7 @@
 	<h2 class="results-header sans-serif2 font18">Showing <?php echo $count; ?> results for <?php echo "'".$key."'"; ?>
 	
 	</h2>
-		<?php if ( ! empty( $user_query->results ) ) :
+		<?php if ( ! empty( $user_query->results ) && $paged == 1 ) :
 			foreach ( $user_query->results as $user ) : ?>
 				
 			<div id="AuthorCenter" 

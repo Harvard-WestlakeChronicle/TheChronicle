@@ -8,6 +8,9 @@
 		<?php just_tell_me($curmonth); ?> ISSUE
 	</p>
 	<img src="<?php bloginfo('template_directory'); ?>/images/cool/opinion.png" id="announce"/>
+	<p id="small-header-viewall" class="uppercase viewall-opinion">
+		<a href="<?php echo site_url(); ?>/all-opinion/">View all Opinion</a>
+	</p>
 	<div id="ticker">
 		<?php get_recent_tags('opinion'); ?>
 	</div>
