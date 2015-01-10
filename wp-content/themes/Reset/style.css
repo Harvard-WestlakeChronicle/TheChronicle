@@ -343,7 +343,7 @@ hr.flair:after {
 }
 #small-header-lastupdated{
 	position:absolute;
-	top:90px;
+	top:60px;
 	font-size:10px;
 	margin:0;
 	font-family:Verdana;
@@ -356,6 +356,16 @@ hr.flair:after {
 	margin:0;
 	font-family:Verdana;
 	margin-left:14px;
+}
+#small-header-viewall{
+	float: right;
+	position:absolute;
+	top:60px;
+	font-size:10px;
+	left: 78%;
+	margin:0;
+	font-family:Verdana;
+	margin-right:10px;
 }
 #big-header-flaglink{
 	display:inline-block;
@@ -2100,18 +2110,23 @@ h4.usatoday.opinion{
 }
 #snubbed-header.news{
 	border-bottom: 8px solid #32507d;
+	position: relative;
 }
 #snubbed-header.sports{
 	border-bottom: 8px solid #6c1924;
+	position: relative;
 }
 #snubbed-header.opinion{
 	border-bottom: 8px solid #466648;
+	position: relative;
 }
 #snubbed-header.features{
 	border-bottom: 8px solid #E07123;
+	position: relative;
 }
 #snubbed-header.ae{
 	border-bottom: 8px solid #7200C1;
+	position: relative;
 }
 #snubbed-header.ArchiveTop.extra{
 	height:92px;
