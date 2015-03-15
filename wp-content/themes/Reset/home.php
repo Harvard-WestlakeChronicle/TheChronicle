@@ -186,14 +186,41 @@
 		<h4 class="uppercase">Subscribe To Weekly Newsletters</h4>
 		<input type="text" placeholder="Submit email here" />
 -->
-		<div class="launch-box">
+		<?php 
+			########## MySql details #############
+			$db_username                    = "hwchroniclecom1"; //Database Username
+			$db_password                    = "fcyyWFmk"; //Database Password
+			$hostname                       = "mysql.hwchronicle.com"; //Mysql Hostname
+			$db_name                        = 'hwchronicle_com_1'; //Database Name
+
+			//connect to the databse
+			$mysqli = new mysqli($hostname,$db_username,$db_password,$db_name);
+
+			//The query (all posts except uris with '/' '/features' '/sports/' '/opinion/' '/news/' '/archives/' '/photo/' '/ae/' '/video/' or that contain '/staff/' or '/issue/'
+			$results = $mysqli->query("SELECT page_uri, page_title, total_views FROM google_top_pages WHERE NOT ( page_uri = '/' ) AND NOT ( page_uri = '/sports/' ) AND NOT ( page_uri = '/features/' ) AND NOT ( page_uri = '/opinion/' ) AND NOT ( page_uri = '/news/' ) AND NOT ( page_uri = '/archives/' ) AND NOT ( page_uri = '/photo/' ) AND NOT ( page_uri = '/ae/' ) AND NOT ( page_uri = '/video/' ) AND page_uri NOT LIKE '%/staff/%' AND page_uri NOT LIKE '%/issue/%' ORDER BY total_views DESC LIMIT 10");
+
+			$x=1;
+			?>
+
+			<div class="Topcontainer">
+				<div class="top_header">Top All Time Posts </div>
+					<ol class="p_feed">
+						<?php while($row = mysqli_fetch_array($results)) {
+							echo '<li><a href="'.$page_url_prefix.$row['page_uri'].'">' . $x . '. ' . substr($row['page_title'], 33) . '</a></li></br>'; $x++;
+							} 
+							echo '<li><a href="'.site_url().'/top-pages/">Click here to view the top 100 posts</a></li></br>';
+							?>
+					</ol>
+				</div>
+			</div>
+		<?php /*<div class="launch-box">
 			<img src="<?php echo get_template_directory_uri(); ?>/images/launch.png" />
 			<div class="text">
 				<a href="<?php echo site_url(); ?>/launch" >
 				watch our welcome video
 				</a>
 			</div>
-		</div>
+		</div>*/ ?>
 	</div>
 	<div class="clear"></div>
 </div>

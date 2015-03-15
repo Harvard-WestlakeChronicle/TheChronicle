@@ -19,7 +19,7 @@ $google_analytics_profile_id    = 'ga:64699213'; //Analytics site Profile ID
 $google_analytics_dimensions    = 'ga:landingPagePath,ga:pageTitle'; //no change needed (optional)
 $google_analytics_metrics       = 'ga:pageviews'; //no change needed (optional)
 $google_analytics_sort_by       = '-ga:pageviews'; //no change needed (optional)
-$google_analytics_max_results   = '100'; //no change needed (optional)
+$google_analytics_max_results   = '500'; //no change needed (optional)
 
 ########## MySql details #############
 $db_username                    = "hwchroniclecom1"; //Database Username
@@ -56,7 +56,7 @@ if (isset($_SESSION["token"])) {
         $analyticsService = new Google_Service_Analytics($gClient); 
         
         //analytics parameters (check configuration file)
-        $params = array('dimensions' => $google_analytics_dimensions,'sort' => $google_analytics_sort_by,'filters' => 'ga:medium==organic','max-results' => $google_analytics_max_results);
+        $params = array('dimensions' => $google_analytics_dimensions,'sort' => $google_analytics_sort_by,/*'filters' => 'ga:medium==organic',*/'max-results' => $google_analytics_max_results);
         
         //get results from google analytics
         $results = $analyticsService->data_ga->get($google_analytics_profile_id,$start_date,$end_date, $google_analytics_metrics, $params);

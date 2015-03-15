@@ -4499,6 +4499,40 @@ blockquote
 	margin-top:-28px;
 }
 
+/* --------------------Top-Post Widget Styles--------------------------------*/
+
+#ChronTopRight .Topcontainer {
+	position:relative;
+	width: 240px; height: 150px; 
+	font-size: 14px; 
+	font: normal normal normal 12px/16px 'Helvetica Neue',Roboto,'Segoe UI',Calibri,sans-serif; 
+	-webkit-box-shadow:1px 1px 5px black; 
+	box-shadow:1px 1px 5px black;
+	-moz-box-shadow:1px 1px 5px black;
+	margin-top:8px;
+}
+
+#ChronTopRight .top_header {
+	text-align: center; 
+	padding: 5px; 
+	border-bottom: gray; 
+	border-bottom-style: solid;
+}
+
+#ChronTopRight .p_feed {
+	width: 240px; 
+	height: 100px; 
+	overflow-y:auto; 
+	padding-left: 5px; 
+}
+
+#ChronTopRight .p_feed li {
+	font: normal normal normal 12px/16px 'Helvetica Neue',Roboto,'Segoe UI',Calibri,sans-serif;
+}
+
+#ChronTopRight .Topcontainer a:hover {
+	color: #943f3f;
+}
 
 
 /* Print styles!
