@@ -186,7 +186,7 @@
 		<h4 class="uppercase">Subscribe To Weekly Newsletters</h4>
 		<input type="text" placeholder="Submit email here" />
 -->
-		<!-- <?php 
+		<?php 
 			########## MySql details #############
 			$db_username                    = "hwchroniclecom1"; //Database Username
 			$db_password                    = "fcyyWFmk"; //Database Password
@@ -212,15 +212,15 @@
 							?>
 					</ol>
 				</div>
-			</div> -->
-		<div class="launch-box">
+			</div> 
+	<!--<div class="launch-box">
 			<img src="<?php echo get_template_directory_uri(); ?>/images/launch.png" />
 			<div class="text">
 				<a href="<?php echo site_url(); ?>/launch" >
 				watch our welcome video
 				</a>
 			</div>
-		</div>
+		</div> -->
 	</div>
 	<div class="clear"></div>
 </div>
