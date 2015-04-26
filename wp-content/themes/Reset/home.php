@@ -186,7 +186,7 @@
 		<h4 class="uppercase">Subscribe To Weekly Newsletters</h4>
 		<input type="text" placeholder="Submit email here" />
 -->
-		<!--<?php 
+		<!-- <?php 
 			########## MySql details #############
 			$db_username                    = "hwchroniclecom1"; //Database Username
 			$db_password                    = "fcyyWFmk"; //Database Password

@@ -46,8 +46,30 @@
 	        return $sql;
 	    }
 
-	    $sql['where'] = preg_replace('/AND/', 'OR', $sql['where'], 1);
+	    //$sql['where'] = str_replace(') AND (', ') OR (', $sql['where']);
+	    //$sql = str_replace_nth('AND', 'OR', $sql, 7);
+	    //print_r($sql);
 	    return $sql;
+	}
+
+	add_action('pre_user_query', 'my_custom_users_search');
+
+	function my_custom_users_search( $args ) {
+	    if( isset( $args->query_vars['meta_query']['replace_and'] ) && $args->query_vars['meta_query']['replace_and'] ){
+	    	$string = $args->query_where;
+	        $args->query_where = str_replace(") AND (", ") OR (", $string);
+	    }
+
+	    return $args;
+	}
+	
+	function str_replace_nth($search, $replace, $subject, $nth)
+	{
+	    $found = preg_match_all('/'.preg_quote($search).'/', $subject, $matches, PREG_OFFSET_CAPTURE);
+	    if (false !== $found && $found > $nth) {
+	        return substr_replace($subject, $replace, $matches[0][$nth][1], strlen($search));
+	    }
+	    return $subject;
 	}	
 
 
@@ -72,6 +94,8 @@
 	
 	// The Query
 	$user_query = new WP_User_Query( $args ); 
+	//echo "wp_query:" .$GLOBALS['wp_query']->request;
+
 	
 	$count+= count($user_query);
 	
