@@ -53,6 +53,8 @@ $("#big-header-switcher").click(function(){
 		$("#video .lightview").css('visibility', 'hidden');
 	}
 	$("#ChronTopRight .fb-like-box").css('display', 'none');
+	$("#ChronTopRight #twitter_container").css('display', 'none');
+	$('.Topcontainer').css('visibility', 'hidden');
 	$('.launch-box').css('visibility', 'hidden');
 	var showen = $("#big-header-switcher .switcher.showen");
 	var hidden = $("#big-header-switcher .switcher.hidden");
@@ -67,7 +69,9 @@ $("#big-header-switcher").click(function(){
 					$("#video .lightview").css('visibility', 'visible');
 				}
 				$("#ChronTopRight .fb-like-box").css('display', 'block');
+				$("#ChronTopRight #twitter_container").css('display', 'block');
 				$('.launch-box').css('visibility', 'visible');
+				$('.Topcontainer').css('visibility', 'visible');
 			}
 		});
 	});
