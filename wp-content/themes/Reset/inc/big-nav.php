@@ -21,7 +21,7 @@
 							<div id="papa-image">
 								<?php the_issue_image(curmonth(), 'issue-thumb'); ?>
 							</div>
-							<p class="uppercase"><!--PRINT--> LATEST EDITION <span class="red"><?php echo first_word(get_formal_issue_month(curmonth())); ?></span></p>
+							<p class="uppercase">PRINT EDITION <span class="red"><?php echo first_word(get_formal_issue_month(curmonth())); ?></span></p>
 							<div class="clear"></div>
 						</div>
 						<div class="switcher two hidden">
