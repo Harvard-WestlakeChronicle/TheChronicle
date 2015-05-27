@@ -22,6 +22,33 @@ a {
 	padding-right: 20px;
 }
 
+.title {
+	text-align: center;
+	font-size: 20px;
+	color: gray;
+	padding-bottom: 15px;
+}
+
+.thumb {
+	padding-bottom: 15px;
+}
+
+.first {
+	padding-left: 10%;
+}
+
+.year {
+	display: inline-block;
+	padding-right: 10%;
+	padding-top: 5%;
+}
+
+.text {
+	width: 240px;
+	height: 700px;
+	font-size: 14px;
+}
+
 .full {
 	width:100%;
 	margin-top: 300px;
@@ -32,6 +59,11 @@ a {
 a:hover {
 	color: red;
 	text-decoration: none;
+}
+
+#banner {
+	padding-left: 50px;
+	padding-top: 100px;
 }
 
 #blackground {
