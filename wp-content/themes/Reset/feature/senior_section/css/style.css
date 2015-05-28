@@ -1,59 +1,24 @@
 /***************
- * Intro Panel *
+ * Nav-bar *
  ***************/
-body {
-	 font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif;
-}
  
-.story-header {
-	color : #666;
-}
 
-h1 {
-	font-size: 40px;
-	color: red;
-	
-}
-
-a {
+.nav-option {
 	text-decoration: none;
 	color: white;
 	display: inline;
 	padding-right: 20px;
 }
 
-.title {
-	text-align: center;
-	font-size: 20px;
-	color: gray;
-	padding-bottom: 15px;
-}
-
-.thumb {
-	padding-bottom: 15px;
-}
-
-.first {
-	padding-left: 10%;
+.active {
+	color: red;
 }
 
 .year {
 	display: inline-block;
-	padding-right: 10%;
+	padding-right: 18%;
 	padding-top: 5%;
-}
-
-.text {
-	width: 240px;
-	height: 700px;
-	font-size: 14px;
-}
-
-.full {
-	width:100%;
-	margin-top: 300px;
-	text-align: center;
-	color: white;
+	vertical-align: top;
 }
 
 a:hover {
@@ -62,7 +27,8 @@ a:hover {
 }
 
 #banner {
-	padding-left: 50px;
+	padding-left: 15%;
+	padding-right: 25%;
 	padding-top: 100px;
 }
 
@@ -70,7 +36,7 @@ a:hover {
 	background-color: black;
 	width:100%;
 	height:400px;
-	//background-image: radial-gradient(#000, #FFF), radial-gradient(#000, #FFF);
+	background-size: 100%;
 }
 
 #seniors-title{
@@ -105,134 +71,80 @@ a:hover {
 	margin: 20px 0px 0px 20px;
 }
 
-.story-header p {
-	color: white;
-	font-size: 22px;
-	padding-top: 0px;
-	width     : 861px;
-}
-
-.story-header .story {
-	width         : 850px;
-	padding-right : 0px;
-}
-
-#header-main {
-	text-align: center;
-}
-
-/***************
- * Intel Panel *
- ***************/
-.story-intel {
-	color      : #FFF;
-}
-
 /*********************
- * Block quote *
+ * content *
  *********************/
-.story-drop {
-	color      : #CCC;
-	background : #000;
+
+.title {
+	text-align: center;
+	font-size: 20px;
+	color: gray;
+	padding-bottom: 15px;
 }
 
-.story-drop .bg {
-	left  : auto;
-	right : 0px;
+.text {
+	width: 240px;
+	height: 1000px;
+	font-size: 14px;
+	color: black;
+}
+
+.texttwo {
+	width: 240px;
+	font-size: 14px;
+	color: black;
 }
 
 /**************
  * Misc *
  **************/
-.blur {
-	-webkit-filter: blur(2px);
-	-moz-filter   : blur(2px);
-	-ms-filter    : blur(2px);
-	-o-filter     : blur(2px);
-	filter        : blur(2px);
-}
-.anti-blur {
-	-webkit-filter: blur(0px);
-	-moz-filter   : blur(0px);
-	-ms-filter    : blur(0px);
-	-o-filter     : blur(0px);
-	filter        : blur(0px);
-	}
-.btext p{
-	color: black;
-	text-align: left;
-	font-size: 20px;
-}
-.btext p first{
-	padding-top: 40px;
-}
-.wtext p{
-	color: white;
-	text-align: left;
-	font-size: 20px;
-}
-#drop {
-	font-size: 50px;
-	font-style: oblique;
-	color: black;
-}
-.blockq{
-	width: 8em;
-	color: #030;
-	font-size: 4em;
-	line-height: 0.9;
-	font-style: italic;
-	padding: 0.5em;
-	margin: 0;
-}
-.right {
-	float: right;
-}
-.left {
-	float: left;
-}
-.blockq p:first-letter {
-	font-size: 3.5em;
-	font-weight: bold;
-}
-.go-back {
-    position: fixed;
-    bottom: 0.75em;
-    left: 0.5em;
-    text-decoration: none;
-    color: white;
-    background-color: #a4a4a4;
-    font-size: 12px;
-    padding: 10px;
-    display: none;
-    margin: 0;
-    z-index: 1;
-    font-family : "Caecilia-Light", 'Helvetica Neue', Arial, Helvetica, sans-serif;
+
+.secondary {
+	position: absolute; 
+	top:450px; 
+	left:0px;
+	visibility: hidden;
 }
 
-.go-back:hover {
-    color: #5e0000;
-    text-decoration: none;
-    font-family : "Caecilia-Light", 'Helvetica Neue', Arial, Helvetica, sans-serif;
-}
-.author {
-	font-style: italic;
-	font-size: 20px;
-	font-family: Caecilia-Roman, Verdana, sans-serif;
-}
-.designer {
-	display: inline;
-	position: fixed;
-	z-index: 1;
-	bottom: 0px;
-	right: 0px;
-	color: white;
-	padding-right: 10px;
-	padding-bottom: 10px;
-	font-family : "Caecilia-Light", 'Helvetica Neue', Arial, Helvetica, sans-serif;
+body {
+	 font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif;
 }
 
-.end {
+h1 {
+	font-size: 40px;
+	color: red;
+	
+}
+
+.active {
+	color: red;
+}
+
+.thumb {
+	padding-bottom: 15px;
+}
+
+.first {
+	padding-left: 10%;
+}
+
+.last {
+	padding-right: 0px;
+}
+
+#big-header-search input:focus{
+	width:160px;
+	background-position:140px -1px;
+}
+
+.credit {
+	top: 80px;
+	left: 30px;
 	position: absolute;
-	overflow: hidden;
+	z-index: 1;
+}
+
+.wrap-small {
+	width: 240px;
+	color: black;
 }

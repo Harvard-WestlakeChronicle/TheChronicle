@@ -202,7 +202,7 @@
 			$x=1;
 			?>
 
-			<div class="Topcontainer">
+			<!--<div class="Topcontainer">
 				<div class="top_header">Top All Time Posts </div>
 				<ol class="p_feed">
 					<?php while($row = mysqli_fetch_array($results)) {
@@ -211,15 +211,15 @@
 						echo '<li><a href="'.site_url().'/top-pages/">Click here to view the top 100 posts</a></li></br>';
 						?>
 				</ol>
-			</div>
-		 <!--<div class="launch-box">
+			</div>-->
+		 <div class="launch-box">
 			<img src="<?php echo get_template_directory_uri(); ?>/images/launch.png" />
 			<div class="text">
-				<a href="<?php echo site_url(); ?>/launch" >
-				watch our welcome video
+				<a href="<?php echo site_url(); ?>/senior-section/" >
+				View the 2015 Senior Section
 				</a>
 			</div>
-		</div> -->
+		</div>
 	</div>
 	<div class="clear"></div>
 </div>
