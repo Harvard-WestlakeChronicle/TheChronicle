@@ -17,13 +17,13 @@
   \__|_| |_|\___|  \_____|_| |_|_|  \___/|_| |_|_|\___|_|\___|
                                                               
                                                                                 
-Coded by Austin Chan '13(heavily) and David Gisser '14.
+Coded by Austin Chan '13(heavily), David Gisser '14, and David Woldenberg '15.
 
 Almost completely from scratch, used a completely blank Reset wordpress theme.
 
-Originally designed by David Lim and Austin Chan. David Woldenberg '15 is the current webmaster.
+Originally designed by David Lim and Austin Chan. Carmen Levine '17 is the current webmaster.
 
-Contact me at dwoldenberg1@gmail.com for any questions or anything at all.
+Contact me at clevine1@hwemail.com for any questions or anything at all.
 
 -->
 
